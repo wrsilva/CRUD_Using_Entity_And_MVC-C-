@@ -1,18 +1,21 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using CRUD_Using_Entity.Dados;
 using CRUD_Using_Entity.Models;
+using CRUD_Using_Entity.Contexto;
 
 namespace CRUD_Using_Entity.Controllers
 {
     public class ProdutoController : Controller
     {
-        private Contexto Db = new Contexto();
+        
+        private readonly ProdutoContexto _proContexto = new ProdutoContexto();
         // GET: Produto
         public ActionResult Index()
         {
-            var produtos = Db.Produtos.ToList();
-            return View(produtos);
+            //Listar Todos Produtos
+            return View(_proContexto.ListaTodos);
+            //Listar Apenas Produtos Ativos
+            //return View(_proContexto.ListaAtivos);
         }
 
         public ActionResult Create()
@@ -23,44 +26,39 @@ namespace CRUD_Using_Entity.Controllers
         [HttpPost]
         public ActionResult Create(Produto produto)
         {
-            Db.Produtos.Add(produto);
-            Db.SaveChanges();
+            _proContexto.SalvarEditar(produto);
             return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
         {
-            var produto = Db.Produtos.Find(id);
-            return View(produto);
+            Produto prod = _proContexto.ListaTodos.FirstOrDefault(p=>p.Id == id);
+          
+            return View(prod);
         }
-       
+
         [HttpPost]
         public ActionResult Edit(Produto produto)
         {
-            var produtos = Db.Produtos.Find(produto.Id);
-            produtos.Nome = produto.Nome;
-            produtos.Categoria = produto.Categoria;
-            produtos.Valor = produto.Valor;
-            Db.SaveChanges();
+            _proContexto.SalvarEditar(produto); 
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(int id)
         {
-            var produtos = Db.Produtos.Find(id);
-            return View(produtos);
+            Produto prod = _proContexto.ListaTodos.FirstOrDefault(p => p.Id == id);
+            return View(prod);
         }
 
         public ActionResult Delete(int id)
         {
-            return View(Db.Produtos.Find(id));
+            Produto prod = _proContexto.ListaTodos.FirstOrDefault(p=>p.Id == id);
+            return View(prod);
         }
         [HttpPost]
         public ActionResult Delete(Produto produto)
         {
-            var produtos = Db.Produtos.Find(produto.Id);
-            Db.Produtos.Remove(produtos);
-            Db.SaveChanges();
+           _proContexto.Deletar(produto.Id);
             return RedirectToAction("Index");
         }
     }

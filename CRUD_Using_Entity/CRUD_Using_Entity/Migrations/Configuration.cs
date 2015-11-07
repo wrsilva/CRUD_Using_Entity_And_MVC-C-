@@ -1,16 +1,18 @@
-using System.Data.Entity.Migrations;
-using CRUD_Using_Entity.Dados;
-
 namespace CRUD_Using_Entity.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<Contexto>
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<CRUD_Using_Entity.Contexto.Contexto>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Contexto context)
+        protected override void Seed(CRUD_Using_Entity.Contexto.Contexto context)
         {
             //  This method will be called after migrating to the latest version.
 

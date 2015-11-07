@@ -124,14 +124,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contexto\ProdutoContexto.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
-    <Compile Include="Dados\Contexto.cs" />
+    <Compile Include="Contexto\Contexto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511062247186_Produtos.cs" />
-    <Compile Include="Migrations\201511062247186_Produtos.Designer.cs">
-      <DependentUpon>201511062247186_Produtos.cs</DependentUpon>
+    <Compile Include="Migrations\201511071658000_statusProdutos.cs" />
+    <Compile Include="Migrations\201511071658000_statusProdutos.Designer.cs">
+      <DependentUpon>201511071658000_statusProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511071742340_status.cs" />
+    <Compile Include="Migrations\201511071742340_status.Designer.cs">
+      <DependentUpon>201511071742340_status.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Produto.cs" />
@@ -155,8 +160,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511062247186_Produtos.resx">
-      <DependentUpon>201511062247186_Produtos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511071658000_statusProdutos.resx">
+      <DependentUpon>201511071658000_statusProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511071742340_status.resx">
+      <DependentUpon>201511071742340_status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

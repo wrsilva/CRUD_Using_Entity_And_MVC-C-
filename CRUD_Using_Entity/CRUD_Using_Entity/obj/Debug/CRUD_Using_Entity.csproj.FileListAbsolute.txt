@@ -35,5 +35,6 @@ C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\bin\System.Web
 C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.csprojResolveAssemblyReference.cache
 C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.dll
 C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.pdb
-C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.Migrations.Produtos.resources
+C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.Migrations.statusProdutos.resources
 C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.csproj.GenerateResource.Cache
+C:\Projetos\CRUD_Using_Entity\CRUD_Using_Entity\CRUD_Using_Entity\obj\Debug\CRUD_Using_Entity.Migrations.status.resources
